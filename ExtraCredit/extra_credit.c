@@ -59,16 +59,26 @@ for (int col=0; col < 5; col++)
                     {
                         if (col == array[j][array[row][col]-1]-1)
                         {
-                            company_selected[k] = 0;
-                            col = k-1;
-                            break;
+                            if (k==0)
+                            {
+                                company_selected[k]=0;
+                                col = 0;
+                                row = -1;
+                                break;
+                            }
+                            else
+                            {
+                                company_selected[k] = 0;
+                                col = k-1;
+                                break;
+                            }
                         }
                         else if (k == array[j][array[row][col]-1]-1)
                         {
                             company_selected[col] = 0;
                             break;
                         }
-                    }
+                    }break;
                 }
             }
         }
