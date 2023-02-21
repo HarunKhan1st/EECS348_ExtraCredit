@@ -79,7 +79,7 @@ for (int col=0; col < 5; col++)
 
 for (int i=0; i < 5; i++)
 {
-    printf("%d ", company_selected[i]);
+    printf("Department #%d will get Programmer #%d \n ", i+1, company_selected[i]);
 }
 
 
